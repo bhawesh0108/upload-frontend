@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #ffff
+}
+
+/*<Route exact path="/">
+<Home />
+</Route>
+<Route path="/signup">
+<SignUp />
+</Route>
+<Route path="/signin">
+<SignIn />
+</Route>
+<Route path="/profile">
+<Profile />
+</Route>*/
