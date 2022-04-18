@@ -9,7 +9,7 @@ const Navbar = ()=>{
         if(state)
         {
             return [
-                <li><Link to="/Profile">Profile</Link></li>,
+                <li><Link to="/profile">Profile</Link></li>,
                 <li><Link to="/create">Create Post</Link></li>,
                 <li>
                      <button class="btn #e53935 red darken-1" onClick={onClick=>{

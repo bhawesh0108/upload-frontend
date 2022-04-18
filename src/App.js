@@ -9,7 +9,9 @@ import Profile from './components/screens/Profile'
 import SignUp from './components/screens/SignUp'
 import SignIn from './components/screens/SignIn'
 import CreatePost from './components/screens/CreatePost'
+import UserProfile from './components/screens/UserProfile'
 import {reducer,initialState} from './reducer/userReducer'
+
 
 
 export const UserContext = createContext();
@@ -24,23 +26,27 @@ const Routing = ()=>{
       if(user)
       {
         dispatch({type:'USER',payload:user})
-        history('/')
+        //history('/')
       }
       else{
-        history('/signin')
+        // history('/signin')
       }
   },[]);
 
   return(
 
   <Routes>
-  <Route  exact path="/" element={<Home/>} />
-  <Route   path="/profile" element={<Profile/>} />
-  <Route   path="/signup" element={<SignUp/>} />
-  <Route   path="/signin" element={<SignIn/>} />
-  <Route   path="/create" element={<CreatePost/>} />
-  
-  </Routes>
+   <Route  exact path="/" element={<Home/>} />
+  <Route   exact path="/profile" element={<Profile/>} />
+  <Route  exact path="/signup" element={<SignUp/>} />
+  <Route  exact path="/signin" element={<SignIn/>} />
+  <Route  exact path="/create" element={<CreatePost/>} />
+  <Route  exact path="/profile/:userid" element={<UserProfile/>} />
+ 
+ 
+
+ </Routes>
+
   )
 }
 
