@@ -113,7 +113,7 @@ const Home = () => {
     return(
      <div className = "home">
          {
-             data.map(item=>{
+             data?data.map(item=>{
                  return(
                     <div className="card home-card" key={item._id}>
                     {/* <h5>{item.postedBy.name} {item.postedBy._id == state._id  */}
@@ -150,9 +150,12 @@ const Home = () => {
                         
                         {
                             item.comments.map(record=>{
-                                return(
-                                <h6 key={record._id}><span style={{fontWeight:"800"}}>{record.postedBy.name}</span> {record.text}</h6>
-                                )
+                                if(record){
+                                    return <h6 key={record._id}><span style={{fontWeight:"800"}}>{record.postedBy.name}</span> {record.text}</h6>
+                                }
+                                return null;
+                                    
+                                
                             })
                         }
                         <form onSubmit={(e)=>{
@@ -164,7 +167,7 @@ const Home = () => {
                     </div>
                  </div>
                  )
-             })
+             }):null
          }
      
     

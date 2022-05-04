@@ -10,6 +10,7 @@ import SignUp from './components/screens/SignUp'
 import SignIn from './components/screens/SignIn'
 import CreatePost from './components/screens/CreatePost'
 import UserProfile from './components/screens/UserProfile'
+import SubscribedUserPosts from './components/screens/SubscribesUserPosts'
 import {reducer,initialState} from './reducer/userReducer'
 
 
@@ -42,7 +43,7 @@ const Routing = ()=>{
   <Route  exact path="/signin" element={<SignIn/>} />
   <Route  exact path="/create" element={<CreatePost/>} />
   <Route  exact path="/profile/:userid" element={<UserProfile/>} />
- 
+  <Route  exact path="/myfollowingpost" element={<SubscribedUserPosts />} />
  
 
  </Routes>

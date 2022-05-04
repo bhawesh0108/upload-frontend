@@ -9,7 +9,7 @@ const Profile  = ()=>{
     const [showfollow,setShowFollow] = useState(state?!state.following.includes(userid):true)
 
     console.log(userid)
-    // console.log("hiii")
+    // console.log(userProfile)y
   useEffect(()=>{
 
     fetch(`/user/${userid}`,{
@@ -90,7 +90,8 @@ const Profile  = ()=>{
                borderBottom:"1px solid grey"
            }}>
                <div>
-               <img style={{width:"160px",height:"160px",borderRadius:"80px"}} src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80" />
+                   {console.log(userProfile)}
+                {userProfile?<img style={{width:"160px",height:"160px",borderRadius:"80px"}} src={userProfile.user.pic}/> : null}
                </div>
                {userProfile ? (<div>
                <h4>{userProfile.user.name}</h4>
